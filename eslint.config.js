@@ -1,13 +1,12 @@
 import eslint from '@eslint/js';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
+import tseslint from 'typescript-eslint';
 
-export default [
+export default tseslint.config(
   eslint.configs.recommended,
+  ...tseslint.configs.recommended,
   {
     files: ['src/**/*.ts', 'src/**/*.tsx'],
     languageOptions: {
-      parser: tsparser,
       parserOptions: {
         ecmaVersion: 2020,
         sourceType: 'module',
@@ -17,12 +16,9 @@ export default [
         process: 'readonly',
       },
     },
-    plugins: {
-      '@typescript-eslint': tseslint,
-    },
     rules: {
       '@typescript-eslint/no-unused-vars': 'error',
       '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
-];
+);

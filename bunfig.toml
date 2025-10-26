@@ -2,19 +2,8 @@
 # https://bun.sh/docs/runtime/bunfig
 
 [install]
-# Configure package installation
 registry = "https://registry.npmjs.org/"
-# Use exact versions by default
-exact = false
-
-[test]
-# Test configuration for bun test
-preload = []
-# Coverage settings
-coverage = true
-coverageDir = "./coverage"
 
 [run]
-# Runtime configuration
-# Automatically install dependencies when running scripts
 autoInstall = true
+bun = true
