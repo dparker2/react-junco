@@ -1,0 +1,57 @@
+{
+    "name": "react-junco",
+    "version": "0.1.0",
+    "description": "A state management library for React",
+    "type": "module",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc --watch",
+        "test": "bun test",
+        "test:ci": "bun test --coverage",
+        "lint": "eslint src --ext .ts,.tsx",
+        "lint:fix": "eslint src --ext .ts,.tsx --fix",
+        "type-check": "tsc --noEmit",
+        "prepublishOnly": "bun run build && bun run test && bun run lint"
+    },
+    "keywords": [
+        "react",
+        "state-management",
+        "typescript"
+    ],
+    "author": "",
+    "license": "MIT",
+    "peerDependencies": {
+        "react": ">=16.8.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.0.0",
+        "@types/bun": "latest",
+        "@types/react": "^18.2.0",
+        "@typescript-eslint/eslint-plugin": "^6.0.0",
+        "@typescript-eslint/parser": "^6.0.0",
+        "eslint": "^9.0.0",
+        "typescript": "^5.1.0"
+    },
+    "engines": {
+        "bun": ">=1.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yourusername/react-junco.git"
+    },
+    "bugs": {
+        "url": "https://github.com/yourusername/react-junco/issues"
+    },
+    "homepage": "https://github.com/yourusername/react-junco#readme"
+}
