@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   test:
@@ -36,10 +36,3 @@ jobs:
 
     - name: Build package
       run: bun run build
-
-    - name: Upload coverage
-      if: matrix.bun-version == 'latest'
-      uses: codecov/codecov-action@v3
-      with:
-        files: ./coverage/coverage-final.json
-        fail_ci_if_error: false
