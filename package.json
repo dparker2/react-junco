@@ -51,10 +51,10 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/yourusername/react-junco.git"
+        "url": "git+https://github.com/dparker2/react-junco.git"
     },
     "bugs": {
-        "url": "https://github.com/yourusername/react-junco/issues"
+        "url": "https://github.com/dparker2/react-junco/issues"
     },
-    "homepage": "https://github.com/yourusername/react-junco#readme"
+    "homepage": "https://github.com/dparker2/react-junco#readme"
 }
