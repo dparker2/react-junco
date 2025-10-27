@@ -1,18 +1,15 @@
 import { describe, expect, test } from "bun:test";
-import { VERSION } from "./index";
+import ViewModel from "./index";
+
+class TestState extends ViewModel<{ count: number }>() {
+    
+}
+const vm = TestState.useModel({ count: 1 });
+const { Provider, useContext } = TestState.createContext();
 
 describe("react-junco", () => {
-  test("exports VERSION constant", () => {
-    expect(VERSION).toBeDefined();
-    expect(typeof VERSION).toBe("string");
-  });
-
-  test("VERSION matches package version", () => {
-    expect(VERSION).toBe("0.1.0");
-  });
-
-  test("VERSION follows semver format", () => {
-    const semverRegex = /^\d+\.\d+\.\d+$/;
-    expect(VERSION).toMatch(semverRegex);
+  test("exports ViewModel", () => {
+    expect(ViewModel).toBeDefined();
+    expect(typeof ViewModel).toBe("function");
   });
 });
