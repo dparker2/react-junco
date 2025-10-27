@@ -29,7 +29,7 @@
         "state-management",
         "typescript"
     ],
-    "author": "",
+    "author": "David Parker (https://github.com/dparker2)",
     "license": "MIT",
     "peerDependencies": {
         "react": ">=16.8.0"
